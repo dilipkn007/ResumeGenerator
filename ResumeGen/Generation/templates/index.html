@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="scroll-smooth">
+  <title>Home</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'main.css' %}">  
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+  <nav class="flex items-center bg-gray-400 p-3 flex-wrap">
+    <a class="p-2 mr-4 inline-flex items-center">
+      <span class="text-xl text-gray-800 font-bold uppercase tracking-wide ">RESUME GENERATOR</span>
+    </a>
+    <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+      <div
+        class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
+        <a href="#sub"
+          class=" lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-800 items-center justify-center hover:bg-gray-600 hover:text-white">
+          <span>Subscribe</span>
+        </a>
+        <a href="{% url 'contact' %}"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-800 items-center justify-center hover:bg-gray-600 hover:text-white">
+          <span>Contact Us</span>
+        </a>
+        <a href="{% url 'about' %}"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-800 items-center justify-center hover:bg-gray-600 hover:text-white">
+          <span>About Us</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <header class="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
+    
+    <a href="{% url 'create' %}"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center bg-gray-600 hover:text-black text-5xl">
+          <span>Create Resume</span>
+        </a>
+  </header>
+  <div class="max-w-lg m-auto bg-opacity-50">
+    <h2 class="text-5xl pb-2"> What is Resume?</h2>
+    <p class="mb-4 leading-8">
+      A resume is a summary of your work profile, combined with your most recent achievements and skills. A well-written
+      resume is a one or two page document that states your relevant skills and work experience. Your resume puts
+      forward your most important skills and accomplishments to inform the HR manager that you are the right candidate
+      for the role.
+      Resumes also offer an effective way for you to assess your career trajectory and skills to make suitable
+      adjustments or additions to them as per the demand in the industry. It is your first impression to the recruiter
+      and helps them decide whether to invite you to interview. Writing a strong resume typically requires planning and
+      understanding what the hiring managers are looking for, as it can be difficult to detail every single aspect of
+      your work experience within one or two pages.</p>
+  </div>
+  <header class="flex items-center justify-center h-96  bg-fixed bg-center bg-cover custom-img">
+    
+    <a href="{% url 'create' %}"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center bg-gray-600 hover:text-black text-5xl">
+          <span>Create Resume</span>
+        </a>
+  </header>
+  <div class="bg-gray-400 p-7 flex gap-80 " >
+    <div >
+      <p class="font-bold">
+        Subscribe to our newsletter
+      </p>
+      <p>
+        The latest news, article, and resources, will be sent to your inbox.
+      </p>
+    </div>
+  <div id="sub">
+      <input class="m-1 h-10 w-80 rounded-md p-2" type="text" placeholder="Enter your email">
+      <a href="{% url 'about' %}"
+          class="m-1 lg:inline-flex lg:w-auto w-full px-5 py-2 rounded-md text-gray-800 items-center justify-center bg-gray-600 text-white hover:bg-transparent hover:text-black
+          ">
+          <span>Subscribe</span>
+        </a>
+   </div> 
+  </div>
+</html>

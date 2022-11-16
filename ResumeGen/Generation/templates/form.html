@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+ 
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+
+<body class="form-body" style="background-image: url(../static/images/img.jpg); opacity: 1; ">
+    <div class="container mx-auto" style="margin-left: 22rem;">
+        <h1 style="padding-left: 3rem; padding-right:3rem; padding-top:3rem;">Enter Your Details</h1>
+        <form style="padding: 3rem;" action="{% url 'testing' %}" method="post">
+            {% csrf_token %}
+            <div style="display : flex;">
+                <div style="flex : 50%;">
+                    <h3 style="padding-bottom: 1rem;">Contact Details</h3>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="name" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" name="email" placeholder="name@example.com"
+                            style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Mobile Number</label>
+                        <input type="number" class="form-control" name="phone" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="designation" class="form-label">Designation</label>
+                        <input type="text" class="form-control" name="designation" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="github" class="form-label">Github Profile</label>
+                        <input type="text" class="form-control" name="github" placeholder="github.com/username"
+                            style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="linkedin" class="form-label">LinkedIn Profile</label>
+                        <input type="text" class="form-control" name="linkedin" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="summary" class="form-label">Summary</label>
+                        <textarea class="form-control" name="summary" rows="3" style="width: 50%;"></textarea>
+                    </div>
+                    <h3 style="padding-top: 1rem;">Educational Details</h3>
+                    <h4 style="padding-top: 1rem; padding: top 1rem; padding-bottom: 1rem;">Secondary Education</h4>
+                    <div class="mb-3">
+                        <label for="schoolname" class="form-label">Name of the Institute</label>
+                        <input type="text" class="form-control" name="schoolname" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="schoolperc" class="form-label">Percentage</label>
+                        <input type="number" class="form-control" name="schoolperc" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="schoolyop" class="form-label">Year of Passing</label>
+                        <input type="number" class="form-control" name="schoolyop" style="width: 50%;">
+                    </div>
+                    <h4 style="padding-top: 1rem; padding: top 1rem; padding-bottom: 1rem;">Higher Secondary Education
+                    </h4>
+                    <div class="mb-3">
+                        <label for="collegename" class="form-label">Name of the Institute</label>
+                        <input type="text" class="form-control" name="collegename" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="collegeperc" class="form-label">Percentage</label>
+                        <input type="number" class="form-control" name="collegeperc" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="collegeyop" class="form-label">Year of Passing</label>
+                        <input type="number" class="form-control" name="collegeyop" style="width: 50%;">
+                    </div>
+                    <h4 style="padding-top: 1rem; padding: top 1rem; padding-bottom: 1rem;">Undergraduate Degree</h4>
+                    <div class="mb-3">
+                        <label for="ugname" class="form-label">Name of the Institute</label>
+                        <input type="text" class="form-control" name="ugname" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="course" class="form-label">Course</label>
+                        <input type="text" class="form-control" name="course" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="special" class="form-label">Specialization</label>
+                        <input type="text" class="form-control" name="special" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ugperc" class="form-label">Percentage</label>
+                        <input type="number" class="form-control" name="ugperc" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ugyop" class="form-label">Year of Passing</label>
+                        <input type="number" class="form-control" name="ugyop" style="width: 50%;">
+                    </div>
+                    <h4 style="padding-top: 1rem; padding: top 1rem; padding-bottom: 1rem;">Postgraduate Degree</h4>
+                    <div class="mb-3">
+                        <label for="pgname" class="form-label">Name of the Institute</label>
+                        <input type="text" class="form-control" name="pgname" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pgcourse" class="form-label">Course</label>
+                        <input type="text" class="form-control" name="pgcourse" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pgspecial" class="form-label">Specialization</label>
+                        <input type="text" class="form-control" name="pgspecial" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pgperc" class="form-label">Percentage</label>
+                        <input type="number" class="form-control" name="pgperc" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pgyop" class="form-label">Year of Passing</label>
+                        <input type="number" class="form-control" name="pgyop" style="width: 50%;">
+                    </div>
+                </div>
+                <div style="flex : 50%;">
+                    <h3>Projects and Certifications</h3>
+                    <h4 style="padding-top: 1rem; padding: top 1rem; padding-bottom: 1rem;">Projects</h4>
+                    <div class="mb-3">
+                        <label for="pjtitle1" class="form-label">Project Title #1</label>
+                        <input type="text" class="form-control" name="pjtitle1" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pjsummary1" class="form-label">Summary</label>
+                        <textarea class="form-control" name="pjsummary1" rows="3" style="width: 50%;"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pjlink1" class="form-label">Project Link (github/bitbucket)</label>
+                        <input type="text" class="form-control" name="pjlink1" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pjtitle2" class="form-label">Project Title #2</label>
+                        <input type="text" class="form-control" name="pjtitle2" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pjsummary2" class="form-label">Summary</label>
+                        <textarea class="form-control" name="pjsummary2" rows="3" style="width: 50%;"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pjlink2" class="form-label">Project Link (github/bitbucket)</label>
+                        <input type="text" class="form-control" name="pjlink2" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pjtitle3" class="form-label">Project Title #3</label>
+                        <input type="text" class="form-control" name="pjtitle3" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pjsummary3" class="form-label">Summary</label>
+                        <textarea class="form-control" name="pjsummary3" rows="3" style="width: 50%;"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pjlink3" class="form-label">Project Link (github/bitbucket)</label>
+                        <input type="text" class="form-control" name="pjlink3" style="width: 50%;">
+                    </div>
+                    <h4 style="padding-top: 1rem; padding: top 1rem; padding-bottom: 1rem;">Certifications</h4>
+                    <div class="mb-3">
+                        <label for="cftitle1" class="form-label">Certification Title #1</label>
+                        <input type="text" class="form-control" name="cftitle1" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cflink1" class="form-label">Link to Certificate</label>
+                        <input type="text" class="form-control" name="cflink1" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cftitle2" class="form-label">Certification Title #2</label>
+                        <input type="text" class="form-control" name="cftitle2" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cflink2" class="form-label">Link to Certificate</label>
+                        <input type="text" class="form-control" name="cflink2" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cftitle3" class="form-label">Certification Title #3</label>
+                        <input type="text" class="form-control" name="cftitle3" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cflink3" class="form-label">Link to Certificate</label>
+                        <input type="text" class="form-control" name="cflink3" style="width: 50%;">
+                    </div>
+                    <h3 style="padding-top: 1rem;">Skills and Hobbies</h3>
+                    <h4 style="padding-top: 1rem; padding: top 1rem; padding-bottom: 1rem;">Skills</h4>
+                    <div class="mb-3">
+                        <label for="skillno1" class="form-label">Skill #1</label>
+                        <input type="text" class="form-control" name="skillno1" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="skillno2" class="form-label">Skill #2</label>
+                        <input type="text" class="form-control" name="skillno2" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="skillno3" class="form-label">Skill #3</label>
+                        <input type="text" class="form-control" name="skillno3" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="skillno4" class="form-label">Skill #4</label>
+                        <input type="text" class="form-control" name="skillno4" style="width: 50%;">
+                    </div>
+                    <h4 style="padding-top: 1rem; padding: top 1rem; padding-bottom: 1rem;">Hobbies</h4>
+                    <div class="mb-3">
+                        <label for="hobby1" class="form-label">Hobbby #1</label>
+                        <input type="text" class="form-control" name="hobby1" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="hobby2" class="form-label">Hobby #2</label>
+                        <input type="text" class="form-control" name="hobby2" style="width: 50%;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="hobby3" class="form-label">Hobby #3</label>
+                        <input type="text" class="form-control" name="hobby3" style="width: 50%;">
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center ">
+                <div class=" lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center bg-gray-600 hover:text-black text-5xl">
+                    <input  type="submit" value="Generate" class="btn btn-primary">
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</body>
+
+</html>

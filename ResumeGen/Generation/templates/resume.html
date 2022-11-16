@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <style type="text/css">
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .top {
+      text-align: center;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    .car-gl {
+      font-size: 20px;
+    }
+
+    li {
+      font-size: 23px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="top">{{details.name}} | {{details.designation}}</h1>
+    <div class="top">
+      <a href="#">{{details.phone}}</a>
+      <a href="mailto:{{details.email}}">{{details.email}}</a>
+      <a href="{{details.github}}">Github</a>
+      <a href="{{details.linkedin}}">LinkedIn</a>
+    </div>
+  </header>
+  <hr>
+  <div class="container" style="margin-left: 15%; margin-right: 15%;">
+    <section>
+      <h1>Career Goals</h1>
+      <p class="car-gl">{{details.summary}}</p>
+    </section>
+    <section>
+      <h1>Education</h1>
+      <ul>
+        {% if details.pgname %}
+          <li>{{details.pgname}}</li>
+          <span>{{details.pgcourse}}</span>
+          <br>
+          <span>{{details.pgspecial}}</span>
+          <br>
+          <span>Graduation - {{details.pgyop}}</span>
+          <br>
+          <br>
+        {% endif %}
+        <li>{{details.ugname}}</li>
+        <span>{{details.course}}</span>
+        <br>
+        <span>{{details.special}}</span>
+        <br>
+        <span>Graduation - {{details.ugyop}}</span>
+        <br>
+        <br>
+        <li>{{details.collegename}}</li>
+        <span>12th Grade - {{details.collegeperc}}</span>
+        <br>
+        <span>Year of Passing - {{details.collegeyop}}</span>
+        <br>
+        <br>
+        <li>{{details.schoolname}}</li>
+        <span>10th Grade - {{details.schoolperc}}</span>
+        <br>
+        <span>Year of Passing - {{details.schoolyop}}</span>
+        <br>
+      </ul>
+    </section>
+    <section>
+      <h1>Skills</h1>
+      <ul>
+
+        <li>{{details.skillno1}}</li>
+        <li>{{details.skillno2}}</li>
+        <li>{{details.skillno3}}</li>
+        <li>{{details.skillno4}}</li>
+
+      </ul>
+    </section>
+    <section>
+      <h1>Projects and Certifications</h1>
+      <ul>
+        <li>Certification: 
+          <a href="{{details.cflink1}}">{{details.cftitle1}}</a>
+        </li>
+        <li>Certification: 
+          <a href="{{details.cflink2}}">{{details.cftitle2}}</a>
+        </li>
+        <li>Certification: 
+          <a href="{{details.cflink3}}">{{details.cftitle3}}</a>
+        </li>
+        <br>
+        <li>Project: <a href="{{details.pjlink1}}">{{details.pjtitle1}}</a></li>
+        <br>
+        <span>{{details.pjsummary1}}</span>
+        <br>
+        <br>
+        <li>Project: <a href="{{details.pjlink2}}">{{details.pjtitle2}}</a></li>
+        <br>
+        <span>{{details.pjsummary2}}</span>
+        <br>
+        <br>
+        <li>Project: <a href="{{details.pjlink3}}">{{details.pjtitle3}}</a></li>
+        <br>
+        <span>{{details.pjsummary3}}</span>
+        <br>
+        <br>
+      </ul>
+    </section>
+    <section>
+      <h1>Hobbies and Interests</h1>
+      <ul>
+        <li>{{details.hobby1}}</li>
+        <li>{{details.hobby2}}</li>
+        <li>{{details.hobby3}}</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <h1 class="top">{{details.name}} | {{details.designation}}</h1>
+    <div class="top">
+      <a href="#">{{details.phone}}</a>
+      <a href="mailto:{{details.email}}">{{details.email}}</a>
+      <a href="{{details.github}}">Github</a>
+      <a href="{{details.linkedin}}">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+
+</html>
